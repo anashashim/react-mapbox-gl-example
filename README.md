@@ -10,6 +10,15 @@ Once cloned the project, goto the project folder and run
 
 Installs all depedencies for the project
 
+### Set .env file
+
+Need to create .env file into your project
+Add below data before run your application
+
+    REACT_APP_API_BASE_URL = "https://restcountries.eu"
+    REACT_APP_MAPBOX_TOKEN = "<your-map-box-token>"
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
