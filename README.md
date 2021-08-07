@@ -18,6 +18,12 @@ Add below data before run your application
     REACT_APP_API_BASE_URL = "https://restcountries.eu"
     REACT_APP_MAPBOX_TOKEN = "<your-map-box-token>"
 
+### Mapbox token generation
+
+- Goto mapbox official webpage https://www.mapbox.com/
+- Create an account and signin to your account
+- You will be land to Dashboard page
+- You will be able to find a public token or You can create a token through '+ create token' button
 
 ### `npm start`
 
