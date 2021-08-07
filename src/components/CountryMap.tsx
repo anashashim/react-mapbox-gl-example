@@ -1,4 +1,7 @@
+// Using a Mapbox for integrating map into Application
+
 import React from 'react';
+
 
 const CountryMap = () => {
     return(
