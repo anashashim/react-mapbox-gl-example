@@ -5,15 +5,16 @@ import SearchBox from '../components/SearchBox';
 
 const SearchPage = () => {
 
+    const [selectedCountries, setSelectedCountries] = useState([]);
+
     return(
         <div className="App">
             <div className='header'>
                 <div>Logo</div>
-                <SearchBox></SearchBox>
+                <SearchBox setSelectedCountriesList={(countries:any)=>setSelectedCountries(countries)}></SearchBox>
             </div>
-            <div className='map-box-container'>
-                <CountryMap></CountryMap>
-            </div>
+            <CountryMap countries={selectedCountries}></CountryMap>
+            
             <div className='chart-box-container'>
                 <PopulationChart></PopulationChart>
             </div>

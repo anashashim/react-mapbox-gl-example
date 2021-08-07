@@ -1,0 +1,44 @@
+.map-box-container{
+    height:80vh;
+    width: 50vw;
+    display: inline-block;
+    float: left;
+}
+.mapboxgl-map {
+    height: 100%;
+    width: 100%;
+}
+
+.city-name {
+    color: #fff;
+    width: max-content;
+    padding: 5px;
+    font-size: 11px;
+    box-shadow: 0 0 4px 1px rgb(0 0 0 / 23%);
+    background: #42a5f5;
+    border-radius: 5px;
+    
+}
+.mapboxgl-marker{
+    top:10px;
+}
+.mark  {
+    background-color: #fff;
+    border-radius: 2px;
+    width: max-content;
+    border: none;
+    
+}
+
+.mark:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 5px solid #42a5f5;
+    position: absolute;
+    left: 39%;
+    top: -5px;
+}

@@ -1,16 +1,17 @@
 import React, { ChangeEvent, useState } from 'react';
 import searchCountries from '../services/searchCountries';
-
+import '../css/searchBox.css';
 const SearchBox = (props:any) => {
-
+    
     const [countries, setCountries] = useState([]);
-    const [selectedCountries, setSelectedCountries] = useState([]);
+    const [selectedCountries, setSelectedCountries] = useState<any[]>([]);
+    const {setSelectedCountriesList} = props;
 
     const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
         const searchText = event.target.value;
+        // Fetch countries only it exceeds 3 letter
         if(searchText.length>2){
             searchCountries.searchCountries(searchText).then((data:any)=>{
-                console.log(data);
                 setCountries(data);
             });
         } else {
@@ -19,8 +20,9 @@ const SearchBox = (props:any) => {
     }
 
     const selectCountry = (data:any) => {
-        let existingPlace:any = [...selectedCountries,data];
-        setSelectedCountries(existingPlace);
+        setSelectedCountries([data, ...selectedCountries]);
+        console.log(selectedCountries);
+        setSelectedCountriesList(selectedCountries);
     }
 
     return(
@@ -33,13 +35,13 @@ const SearchBox = (props:any) => {
                 onChange={ handleChange}/>
             {
                 countries.length > 0 &&
-                <ul className='lists'>
-                    {
-                        countries.map((data:any)=>{
-                            return <li key={data.alpha3Code} onClick={()=> selectCountry(data)}>{data.name}</li>
-                        })
-                    }
-                </ul>
+                    <ul className='lists'>
+                        {
+                            countries.map((data:any)=>{
+                                return <li key={data.alpha3Code} onClick={()=> selectCountry(data)}>{data.name}</li>
+                            })
+                        }
+                    </ul>
             }
         </div>
     )
