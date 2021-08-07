@@ -4,6 +4,7 @@ import React from 'react';
 import ReactMapboxGl, { Marker } from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../css/map.css';
+import { useEffect } from 'react';
 
 const CountryMap = (props:any) => {
     const {countries} = props;
@@ -15,6 +16,9 @@ const CountryMap = (props:any) => {
     });
     const zoom: [number] = [0]; // Zoom out 0, we can see whole map
 
+    useEffect(()=>{
+
+    },[countries])
     return(
         <div className='map-box-container'>
             <Map 

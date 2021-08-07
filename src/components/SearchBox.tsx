@@ -1,15 +1,18 @@
+// Searchbox component
 import React, { ChangeEvent, useState } from 'react';
 import searchCountries from '../services/searchCountries';
 import '../css/searchBox.css';
+import { useEffect } from 'react';
+
 const SearchBox = (props:any) => {
     
-    const [countries, setCountries] = useState([]);
-    const [selectedCountries, setSelectedCountries] = useState<any[]>([]);
+    let [countries, setCountries] = useState([]);
+    let [selectedCountries, setSelectedCountriess] = useState<any[]>([]);
     const {setSelectedCountriesList} = props;
 
     const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
         const searchText = event.target.value;
-        // Fetch countries only it exceeds 3 letter
+        // Fetch countries only query exceeds 3 letter
         if(searchText.length>2){
             searchCountries.searchCountries(searchText).then((data:any)=>{
                 setCountries(data);
@@ -18,12 +21,16 @@ const SearchBox = (props:any) => {
             setCountries([]);
         }
     }
-
+    
     const selectCountry = (data:any) => {
-        setSelectedCountries([data, ...selectedCountries]);
-        console.log(selectedCountries);
-        setSelectedCountriesList(selectedCountries);
+        let existingPlace:any = [data, ...selectedCountries];
+        setSelectedCountriess([...existingPlace]);
     }
+
+    useEffect(()=>{
+        // Updating 
+        setSelectedCountriesList(selectedCountries)
+    },[selectedCountries])
 
     return(
         <div className='search-box-container'>
