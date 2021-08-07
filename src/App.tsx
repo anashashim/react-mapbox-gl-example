@@ -1,12 +1,9 @@
 import React from 'react';
 import './App.css';
+import SearchPage from './pages/SearchPage';
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+  return <SearchPage />
 }
 
 export default App;
