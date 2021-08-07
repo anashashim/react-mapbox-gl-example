@@ -10,7 +10,10 @@ const SearchPage = () => {
     return(
         <div className="App">
             <div className='header'>
-                <div>Logo</div>
+                <div className='logo'>
+                    <img src='/assets/images/logo.png'/>
+                    Mapbox
+                </div>
                 <SearchBox setSelectedCountriesList={(countries:any)=>setSelectedCountries(countries)}></SearchBox>
             </div>
             <CountryMap countries={selectedCountries}></CountryMap>

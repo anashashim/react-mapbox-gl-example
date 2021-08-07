@@ -1,0 +1,25 @@
+div {
+  box-sizing: border-box;
+}
+
+.header {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid rgb(0 0 0 / 4%);
+  box-shadow: 0 0 7px 2px rgb(59 128 232 / 8%);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: 800;
+  float: left;
+  width: 20%;
+  color: #444;
+  padding: 10px 20px;
+  line-height: 1.5em;
+}
+
+.logo img {
+  height: 20px;
+  margin-right: 7px;
+}

@@ -1,16 +1,17 @@
 .search-box-container {
     position: relative;
+    float: left;
+    width: 60%;
 }
 
 .search-box {
-    width: 50%;
-    border-radius: 30px;
+    width: 60%;
+    border-radius: 10px;
     border: 1px solid rgb(0 0 0 / 4%);
-    box-shadow: 0 0 7px 2px rgb(59 128 232 / 8%);
-    padding: 20px;
-    margin: 20px auto;
+    padding: 10px 10px 10px 40px;
+    margin: 10px auto;
     display: flex;
-    font-size: 17px;
+    font-size: 15px;
     color: #0000007a;
     outline: none;
 }
@@ -19,9 +20,9 @@ ul.lists {
     position: absolute;
     background: #fff;
     z-index: 9;
-    top: 65px;
+    top: 55px;
     list-style-type: none;
-    width: 45%;
+    width: 60%;
     border: 1px solid rgb(0 0 0 / 4%);
     border-radius: 7px;
     box-shadow: 0 0 7px 2px rgb(59 128 232 / 8%);
