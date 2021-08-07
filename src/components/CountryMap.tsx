@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 
 const CountryMap = (props:any) => {
     const {countries} = props;
-    console.log("COUNTIRES", countries);
     // Token need to change, token will vary from user to user, need to create it from Mapbox offical website
     const token = 'pk.eyJ1IjoiYW5hc3BoYXNoaW0iLCJhIjoiY2tzMDU4cGppMHkyZTJ2bXN6NmJhemRjbSJ9.HY8f_u0FD-mTKX-pU4l6vQ';
     const Map = ReactMapboxGl({

@@ -28,7 +28,7 @@ const SearchBox = (props:any) => {
     }
 
     useEffect(()=>{
-        // Updating 
+        // Passing data to parent page
         setSelectedCountriesList(selectedCountries)
     },[selectedCountries])
 
