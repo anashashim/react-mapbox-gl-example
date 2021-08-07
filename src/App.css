@@ -7,6 +7,7 @@ div {
   width: 100%;
   border-bottom: 1px solid rgb(0 0 0 / 4%);
   box-shadow: 0 0 7px 2px rgb(59 128 232 / 8%);
+  height: 10vh;
 }
 
 .logo {
@@ -22,4 +23,20 @@ div {
 .logo img {
   height: 20px;
   margin-right: 7px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 15% 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header {
+    height: auto;
+  }
 }

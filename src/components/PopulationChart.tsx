@@ -12,19 +12,27 @@ import '../css/chart.css';
 const PopulationChart = (props:any) => {
     const chartData:ChartDataItem[] = props.chartData;
     return(
-        <div className='chart-box-container'>
-            <Chart data={chartData} >
-                <ValueScale name="population" />
-                <ArgumentAxis />
-                <ValueAxis scaleName="population" showGrid={true} showLine={true} showTicks={true} />
-                <BarSeries
-                    name="country"
-                    valueField="population"
-                    argumentField="country"
-                    scaleName="population"
-                />
+        <div className='item chart-box-container'>
+            <h4>Population comparison</h4>
+            {
+                chartData.length>0
+                ?
+                <Chart data={chartData} >
+                    <ValueScale name="population" />
+                    <ArgumentAxis />
+                    <ValueAxis scaleName="population" showGrid={true} showLine={true} showTicks={true} />
+                    <BarSeries
+                        name="country"
+                        valueField="population"
+                        argumentField="country"
+                        scaleName="population"
+                    />
 
-            </Chart>
+                </Chart>
+                :
+                <div className='no-data'>No Countries selected</div>
+            }
+            
         </div>
     )
 }

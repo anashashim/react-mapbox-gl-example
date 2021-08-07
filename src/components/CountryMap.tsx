@@ -20,7 +20,7 @@ const CountryMap = (props:any) => {
 
     },[countries])
     return(
-        <div className='map-box-container'>
+        <div className='item map-box-container'>
             <Map 
                 style="mapbox://styles/mapbox/light-v9"
                 zoom={zoom}>

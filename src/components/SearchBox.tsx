@@ -42,6 +42,7 @@ const SearchBox = (props:any) => {
                 onChange={ handleChange}/>
             {
                 countries.length > 0 &&
+                <div>
                     <ul className='lists'>
                         {
                             countries.map((data:any)=>{
@@ -49,6 +50,8 @@ const SearchBox = (props:any) => {
                             })
                         }
                     </ul>
+                    <div className="overlay" onClick={()=>setCountries([])}></div>
+                </div>   
             }
         </div>
     )
